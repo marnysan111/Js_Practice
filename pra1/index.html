@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            日本語ドキュメントを読んでいく
+        </title>
+        <link rel="stylesheet" href="./main.css">
+    </head>
+    <body>
+
+        <div id="app">
+            メッセージ：<input v-model="Message">
+            <p>Message is "{{ Message }}"</p>
+            <p>Reverse Message is "{{ reverseMessage }}"</p>
+        </div>
+
+        <div id="app2">
+            苗字：<input v-model="firstName">
+            名前：<input v-model="lastName">
+            <p>firstName is：{{ firstName }}</p>
+            <p>lastName is：{{ lastName }}</p>
+            <p>fullName is：{{ fullName }}</p>
+        </div>
+
+        <div id="watch-example">
+            <p>
+              Ask a yes/no question:
+              <input v-model="question">
+            </p>
+            <p>{{ answer }}</p>
+        </div>
+
+        <div id="app3">
+            <div v-bind:class="classObject" v-bind:style="styleObject">Hello Vue!</div>
+        </div>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="./main.js"></script>
+
+    </body>
+</html>
