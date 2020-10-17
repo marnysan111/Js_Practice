@@ -34,6 +34,14 @@
         <div id="app3">
             <div v-bind:class="classObject" v-bind:style="styleObject">Hello Vue!</div>
         </div>
+
+        <div id="app4">
+            <p>～～～登録フォーム～～～</p>
+            <form action="test.html" method="POST">
+                <input type="text"><br>
+                <button type="submit" v-bind:disabled="!canEnter">登録</button>
+            </form>
+        </div> 
         
         
         <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>

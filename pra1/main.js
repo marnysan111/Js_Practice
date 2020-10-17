@@ -79,3 +79,16 @@ new Vue({
       }
     },
   })
+
+
+  new Vue({
+    el: '#app4',
+    data: {
+      strings:strings
+    },
+    computed: {
+      canEnter: function () {
+        return false
+      }
+    }
+  })
