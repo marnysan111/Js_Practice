@@ -80,15 +80,40 @@ new Vue({
     },
   })
 
-
+/*
   new Vue({
     el: '#app4',
-    data: {
-      strings:strings
+    data: {},
+    methods: {
+      doEnter: function (name) {
+        if (name == null) {
+          alert("XSS");
+          return false
+        } else {
+          alert("aaa");
+          return true
+        }
+      }
     },
     computed: {
       canEnter: function () {
-        return false
       }
     }
+  })
+*/
+  new Vue({
+    el: '#app5',
+    data: {
+      name: '',
+      pass: ''
+    },
+    computed: {
+      canEnter1: function() {
+        if(this.name !== '') {
+          return true
+        } else {
+          return false
+        }
+      }
+    },
   })
