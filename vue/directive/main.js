@@ -18,3 +18,24 @@ new Vue({
         }
     }
 })
+
+new Vue({
+    el: "#app2",
+    data: {
+        pet: '未選択'
+    }
+}); 
+
+new Vue({
+    el: "#app3",
+    data: {
+        show: false
+    }
+})
+
+new Vue({
+    el: "#app4",
+    data: {
+        holiday: ''
+    }
+})

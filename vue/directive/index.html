@@ -6,10 +6,51 @@
     <title>Document</title>
 </head>
 <body>
-
+    <p>カーソルを合わせると画像が変わります</p>
     <div id="app">
         <img v-bind:src="path" alt="ロゴ" v-on:mouseenter="onmouseenter"
         v-on:mouseleave="onmouseleave" v-on:error="onerror" />
+    </div>
+
+    <div id="app2">
+        <form>
+            <label for="dog">ｲｯﾇ</label>
+            <input type="radio" id="dog" value="いぬ" v-model="pet" />
+            <label for="cat">ﾈｯｺ</label>
+            <input type="radio" id="cat" value="ねこ" v-model="pet" />
+            <label for="other">その他</label>
+            <input type="radio" id="other" value="その他" v-model="pet" />
+        </form>
+        <p>ペット： {{ pet }}</p> <br>
+    </div>
+
+    <div id="app3">
+        <form>
+            <label for="show">表示/非表示</label>
+            <input type="checkbox" id="show" v-model="show">
+        </form>
+        <div id="panel" v-if="show">
+            <h3>バトラすこすこ</h3>
+            <div>バトラは身長162で自己べは1:39:12</div>
+        </div>
+    </div>
+
+    <br>
+
+    <div id="app4">
+        <form>
+            <label for="holiday">祝日：</label><br>
+            <select id="holiday" v-model="holiday">
+                <option value="">祝日を選択してください</option>
+                <option value="new">元旦</option>
+                <option value="child">こどもの日</option>
+                <option value="culuture">文化の日</option>
+            </select>
+        </form>
+        <div v-if="holiday==='new'">1月1日</div>
+        <div v-else-if="holiday==='child'">5月5日</div>
+        <div v-else-if="holiday==='culuture'">11月3日</div>
+        <div v-else>なにも選択されていません。</div>
     </div>
 
 
